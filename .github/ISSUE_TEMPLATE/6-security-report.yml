@@ -1,0 +1,89 @@
+name: Security report
+description: 🐞🐞 Submit information about potential security/vulnerability issues.
+title: "[Security report]: "
+labels: ["security", "vulnerability"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to notify the development
+        Please first check the issue board to see if your issue has already been addressed.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more information?
+      placeholder: e.g. email@example.com
+    validations:
+      required: false
+###############################################################################
+  - type: textarea
+    id: component
+    attributes:
+      label: Title
+      description: A brief summary of the security issue.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe in more detail the security issue.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How critical is the security issue?
+      options:
+        - Low
+        - Medium
+        - High
+  - type: textarea
+    id: config
+    attributes:
+      label: configurations
+      description: If using custom configurations, please provide these so the issue can be reproduced.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Please provide any additional information which will be required to reproduce this issue.
+    validations:
+      required: false
+  - type: textarea
+    id: remediation
+    attributes:
+      label: Remediation
+      description: If you have a proposal to remedy the security issue, please describe it here.
+    validations:
+      required: false
+###############################################################################
+  - type: textarea
+    id: version
+    attributes:
+      label: Version
+      description: What build version of the library are you using?
+    validations:
+      required: true
+  - type: textarea
+    id: python-version
+    attributes:
+      label: What version of Python are you running?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Paste relevant log output here.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/weaver-lab/py-wiremq/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow Weaver labs' Code of Conduct for pywiremq
+          required: true

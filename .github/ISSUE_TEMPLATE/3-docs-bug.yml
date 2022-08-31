@@ -1,0 +1,65 @@
+name: Documentation Issue Report
+description: 🐞🐞 File a report of an issue regarding documentation.
+title: "[Documentation error]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to file an issue about documentation.
+        Please first check the issue board to see if your issue has already been addressed.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more information?
+      placeholder: e.g. email@example.com
+    validations:
+      required: false
+###############################################################################
+  - type: textarea
+    id: file
+    attributes:
+      label: File name
+      description: The URL or title of the documentation.
+      placeholder: e.g. https://github.com/weaver-lab/py-wiremq/blob/develop/README.md
+  - type: textarea
+    id: location
+    attributes:
+      label: Location of issue within the file.
+      description: Line number(s) in the raw version of the documentation, or section where the issue is located.
+      placeholder: e.g. lines 211 - 220, or, overview section
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What the issue is and how you think it should be resolved.
+      placeholder: Typo; 'atribute' should be 'attribute'
+###############################################################################
+  - type: textarea
+    id: version
+    attributes:
+      label: Version
+      description: What build version of the library are you using?
+    validations:
+      required: true
+  - type: textarea
+    id: python-version
+    attributes:
+      label: What version of Python are you running?
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Paste relevant log output here.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/weaver-lab/py-wiremq/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow Weaver labs' Code of Conduct for pywiremq
+          required: true
