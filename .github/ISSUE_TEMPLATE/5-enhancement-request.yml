@@ -1,7 +1,7 @@
 name: Enhancement request
 description: 🐞🐞 Submit a request for the enhancement of an existing component.
 title: "[Enhancement request]: "
-labels: ["enhancement", "modification"]
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:

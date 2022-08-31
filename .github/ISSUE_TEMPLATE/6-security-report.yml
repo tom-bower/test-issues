@@ -1,7 +1,7 @@
 name: Security report
 description: 🐞🐞 Submit information about potential security/vulnerability issues.
 title: "[Security report]: "
-labels: ["security", "vulnerability"]
+labels: ["security"]
 body:
   - type: markdown
     attributes:

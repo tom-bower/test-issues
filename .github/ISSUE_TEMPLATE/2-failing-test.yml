@@ -1,7 +1,7 @@
 name: Failing Test Report
 description: 🐞🐞 File a report of a failing test. Tests are run using either `make test` for unit tests, or `make integration-test` for integration tests.
 title: "[Failing test]: "
-labels: ["failing", "test"]
+labels: ["test"]
 body:
   - type: markdown
     attributes:
