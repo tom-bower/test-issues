@@ -40,6 +40,7 @@ jobs:
         mongodb:-username: weaverusr
         mongodb-password: weaverpass
         mongodb-db: weaverdb
+        mongodb-version: '6.0'
     - name: Test with pytest
       run: |
         pytest
