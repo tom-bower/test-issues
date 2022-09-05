@@ -1,0 +1,19 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Test pywiremq
+
+on:
+  workflow_run:
+    workflows: ["Run databases"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test with pytest
+      run: |
+        pytest
