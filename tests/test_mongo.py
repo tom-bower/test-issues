@@ -1,7 +1,6 @@
 from pymongo import MongoClient
 client = MongoClient(
-    'localhost',
-    27017,
+    'mongodb://localhost',
     username='weaverusr',
     password='weaverpass'
 )
