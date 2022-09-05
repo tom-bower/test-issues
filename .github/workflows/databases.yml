@@ -4,7 +4,7 @@
 name: Run databases
 on:
   workflow_run:
-    workflows: ["Build wiremq"]
+    workflows: ["Build pywiremq"]
 jobs:
   build:
     - name: Start MongoDB
