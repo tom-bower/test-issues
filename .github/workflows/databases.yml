@@ -7,7 +7,13 @@ on:
     workflows: ["Build wiremq"]
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Create mongoDB Docker container      
-      run: sudo docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=weaverusr -e MONGO_INITDB_ROOT_PASSWORD=weaverpass -e MONGODB_INITDB_DATABASE=weaverdb mongo:latest
+    - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.8.0
+        with
+          mongodb-username: weaverusr
+          mongodb-password: weaverpass
+          mongodb-db: weaverdb
+#    runs-on: ubuntu-latest
+#    steps:
+#    - name: Create mongoDB Docker container
+#      run: sudo docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=weaverusr -e MONGO_INITDB_ROOT_PASSWORD=weaverpass -e MONGODB_INITDB_DATABASE=weaverdb mongo:latest
