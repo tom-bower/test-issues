@@ -37,9 +37,9 @@ jobs:
     - name: Start MongoDB
       uses: supercharge/mongodb-github-action@1.8.0
       with:
-        mongodb:-username: "weaverusr"
-        mongodb-password: "weaverpass"
-        mongodb-db: "weaverdb"
+        mongodb:-username: weaverusr
+        mongodb-password: weaverpass
+        mongodb-db: weaverdb
     - name: Test with pytest
       run: |
         pytest
