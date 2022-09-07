@@ -25,6 +25,7 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
+        apt-get install libmariadb3 libmariadb-dev
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -37,6 +38,9 @@ jobs:
     - name: Start MongoDB
       run: |
         sudo docker run --name mongo-gh -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=weaverusr -e MONGO_INITDB_ROOT_PASSWORD=weaverpass -e MONGODB_INITDB_DATABASE=weaverdb mongo
+    - name: Start MariaDB
+      run: |
+        sudo docker run --name mariadb-gh -d -p 5432:5432 -e MARIADB_ROOT_USER=weaverusr -e MARIADB_ROOT_PASSWORD=weaverpass -e MARIADB_DATABASE=weaverdbmariadb
 #      uses: supercharge/mongodb-github-action@1.8.0
 #      with:
 #        mongodb:-username: weaverusr
