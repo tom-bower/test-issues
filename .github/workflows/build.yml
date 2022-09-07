@@ -51,7 +51,7 @@ jobs:
     
     - name: Start MariaDB
       run: |
-        sudo docker run --name mariadb-gh -d -p 5432:5432 -e MARIADB_ROOT_USER=weaverusr -e MARIADB_ROOT_PASSWORD=weaverpass -e MARIADB_DATABASE=weaverdbmariadb
+        sudo docker run --name mariadb-gh -d -p 5432:5432 -e MARIADB_ROOT_USER=weaverusr -e MARIADB_ROOT_PASSWORD=weaverpass -e MARIADB_DATABASE=weaverdb mariadb
 
 #      uses: supercharge/mongodb-github-action@1.8.0
 #      with:
