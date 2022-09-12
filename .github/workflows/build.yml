@@ -66,4 +66,6 @@ jobs:
         pytest
     - name: Check linting result
       if: steps.lint.outcome != 'success'
-      run: exit 1
+      run: |
+        echo "Code linting failed, check 'Lint with flake8' section for logs"
+        exit 1
