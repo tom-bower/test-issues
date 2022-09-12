@@ -65,5 +65,5 @@ jobs:
       run: |
         pytest
     - name: Check linting result
-      if: steps.lint.outputs.status == 'failure'
+      if: steps.lint.outcome != 'success'
       run: exit 1
