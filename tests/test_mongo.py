@@ -20,3 +20,4 @@ def test_delete():
     _new_count = db.pytest.count_documents({})
     assert _new_count == _initial_count - 1
 
+test_insert()
